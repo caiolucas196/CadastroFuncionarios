@@ -18,26 +18,32 @@ public class Funcionario {
     public int getId() {
         return id;
     }
+
     public void setId(int id) {
         this.id = id;
     }
+
     public String getNome() {
         return nome;
     }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
+
     public Double getSalario() {
         return salario;
     }
+
     public void setSalario(Double salario) {
         this.salario = salario;
     }
 
-    public void increaseSalario(Double salario) {
+    public void increaseSalario(double percentage) {
         this.salario += salario * percentage / 100.0;
     }
 
-
+    public String toString() {
+        return id + " , " + nome + " , " + String.format("%.2f", salario);
+    }
 }
-
